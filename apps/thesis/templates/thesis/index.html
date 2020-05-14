@@ -10,26 +10,18 @@
 			height: 90%;;
 			width: 100%;
 		}
-		#legend{
-			height: 10%;
-			
-		}
-		#legend h1{
-			
-		}
 		
 		#contentSize{
-			height: 100px;
+			height: 200px;
 			width: 300px;
 			font-size: 20px;
 			font-weight: bold;
 			text-align: center;
-			padding-top: 30px;
+			padding-top: 10px;
 		}
 	</style>
 	<script type="text/javascript" src="/static/thesis/javascript/barangay.js"></script>
 	<script type="text/javascript" src="/static/thesis/javascript/blocks.js"></script>
-	<script type="text/javascript" src="/static/thesis/javascript/factors.js"></script>
 
 </head>
 <body>
@@ -47,26 +39,28 @@
 
 		addMarker({lat:8.9407, lng:125.5332}, "SUN BUSINESS CENTER", "blue")
 		addMarker({lat:8.9465, lng:125.5313}, "ALLIANCE IN MOTION", "blue")
-		addMarker({lat:8.9463, lng:125.5405}, "STERLING BANK OF ASIA VISA CARD BILL PAYMENTS", "blue")
+		//addMarker({lat:8.9463, lng:125.5405}, "STERLING BANK OF ASIA VISA CARD BILL PAYMENTS", "blue")
 		addMarker({lat:8.9480, lng:125.5428}, "SSS CONTRIBUTION PAYMENT", "blue")
 		addMarker({lat:8.9489, lng:125.5417}, "AVON", "blue")
 		addMarker({lat:8.9478, lng:125.5441}, "YLH SALES CORPORATION", "blue")
 		addMarker({lat:8.9477, lng:125.5446}, "MANCAO SUPERMARKET INCORPORATED", "blue")
-		addMarker({lat:8.9456, lng:125.5405}, "ABEST EXPRESS AGUSAN DEL NORTE", "blue")
-		addMarker({lat:8.9495, lng:125.5420}, "GENUINE CYCLE CENTER", "blue")
+		//addMarker({lat:8.9456, lng:125.5405}, "ABEST EXPRESS AGUSAN DEL NORTE", "blue")
+		//addMarker({lat:8.9495, lng:125.5420}, "GENUINE CYCLE CENTER", "blue")
 		addMarker({lat:8.948627, lng:125.542812}, "CENTER FOR POP MUSIC BUTUAN", "blue")
 		addMarker({lat:8.946683, lng:125.533299}, "LBC EXPRESS INCORPORATED", "blue")
-		addMarker({lat:8.9514, lng:125.5405}, "FUNDACION INTERED", "blue")
+		//addMarker({lat:8.9514, lng:125.5405}, "FUNDACION INTERED", "blue")
 		addMarker({lat:8.9498, lng:125.5428}, "J.P.T Central Corporate Holding and Management", "blue")
 		addMarker({lat:8.9399, lng:125.5235}, "Alchryss Inn And Grill Hauz", "blue")
-		addMarker({lat:8.946282, lng:125.532137}, "WESTERN UNNION", "blue")
+		//addMarker({lat:8.946282, lng:125.532137}, "WESTERN UNNION", "blue")
 		addMarker({lat:8.9457, lng:125.5338}, "SM CITY MALL BUTUAN", "red")
 		addMarker({lat:8.9424, lng:125.5198}, "ROBINSONS MALL BUTUAN", "red")
 		addMarker({lat:8.9478, lng:125.5402}, "ZCC CENTRAL MALL BUTUAN", "red")
 		addMarker({lat:8.9442, lng:125.5321}, "GAISANO MALL BUTUAN", "red")
-		
-		
-		
+		addMarker({lat:8.971971, lng:125.538433}, "BUTUAN CHURCH RUINS", "pink")
+		addMarker({lat:8.999450, lng:125.484335}, "MAGELAN'S ANCHORAGE", "pink")
+		addMarker({lat:8.9541, lng:125.4963}, "BALANGAY SHRINE", "pink")
+		addMarker({lat:8.906876, lng:125.502164}, "DELTA DISCOVERY PARK", "pink")
+		addMarker({lat:8.9460, lng:125.5207}, "BUTUAN NATIONAL MUSEUM", "pink")
 
 		makePolygon(Humabon,Humabon)
 		makePolygon(Sikatuna,Sikatuna)
@@ -78,93 +72,108 @@
 		makePolygon(NewSocietyVillage)
 		makePolygon(LapuLapu)
 		makePolygon(Dagohoy)
-
-
-		factorsLatLng = [
+		
+		destinations = [
 			{lat:8.9457, lng:125.5338}, // SM 
 			{lat:8.9424, lng:125.5198}, // ROBINSONS
 			{lat:8.9478, lng:125.5402}, // ZCC
-			{lat:8.9442, lng:125.5321}, // GAISANO
-			
+			{lat:8.9442, lng:125.5321}, // GAISANO	
 			{lat:8.9407, lng:125.5332},
 			{lat:8.9465, lng:125.5313},
-			{lat:8.9463, lng:125.5405},
+			//{lat:8.9463, lng:125.5405},// sterling bank of asia visa card bill payments
 			{lat:8.9480, lng:125.5428},
 			{lat:8.9489, lng:125.5417},
 			{lat:8.9478, lng:125.5441},
 			{lat:8.9477, lng:125.5446},
-			{lat:8.9456, lng:125.5405},
-			{lat:8.9495, lng:125.5420},
+			//{lat:8.9456, lng:125.5405}, // ABEST EXPRESS AGUSAN
+			//{lat:8.9495, lng:125.5420}, // GENUINE CYCLE CENTER
 			{lat:8.948627, lng:125.542812},
 			{lat:8.946683, lng:125.533299},
-			{lat:8.9514, lng:125.5405},
+			//{lat:8.9514, lng:125.5405}, //fundacion intered
 			{lat:8.9498, lng:125.5428},
 			{lat:8.9399, lng:125.5235},
-			{lat:8.946282, lng:125.532137},
+			//{lat:8.946282, lng:125.532137}, // WESTERN UNION
+
+			{lat:8.971971, lng:125.538433}, // butuan church ruins
+			{lat:8.999450, lng:125.484335}, // magellan's anchorage
+			{lat:8.9541, lng:125.4963}, // balanghay shrine 
+			{lat:8.906876, lng:125.502164}, // delta discovery park
+			{lat:8.9460, lng:125.5207}, // butuan national museum
+			//{lat:8.0497, lng:125.6483}, // tagnote falls 
 		
 		];
-		
-		
-		var origin1 = new google.maps.LatLng(8.9407,125.5332);
-		var destination1 = new google.maps.LatLng(8.9442, 125.5321);
+		console.log(destinations)
+
 		var travelMode = ['DRIVING']
 
-		var origin = [{lat:8.9407, lng:125.5332},{lat:8.9465, lng:125.5313}]
+		
 	
 		
 		var service = new google.maps.DistanceMatrixService();
-		var label = ['sun','aim'];
 		var factorss = [
-			'sm','robinsons','zcc','gaisano',
-			'sun','aim','sterling','SSS', 'AVON', 
-			'YLH sales corp', 'MANCAO', 'ABEST EXPRESS', 
-			'GENUINE CYCLE CENTER', 'CENTER FOR POP MUSIC',
-			'LBC EXPRESS',
-			'FUNDACION INTERED',
-			'J.P.T CENTRAL',
+			'SM','ROBINSONS','ZCC','GAISANO',
+			'SUN','AIM GLOBAL','SSS', 'AVON', 
+			'YLH sales corp', 'MANCAO', 
+			'CENTER FOR POP MUSIC',
+			'LBC EXPRESS','J.P.T CENTRAL',
 			'Alchryss Inn And Grill Hauz',
-			'WESTERN UNNION'
+			'Butuan Church Ruins',
+			'Magellans Anchorage',
+			'Balangay Shrine',
+			'Delta Discovery Park',
+			'Butuan National Museum',
 		];
-		var bcname = ['sun','aim','sterling','SSS', 'AVON', 
-		'YLH sales corp', 'MANCAO', 'ABEST EXPRESS', 
-		'GENUINE CYCLE CENTER', 'CENTER FOR POP MUSIC',
+		var bcname = ['sun','aim','SSS', 'AVON', 
+		'YLH sales corp', 'MANCAO',
+		'CENTER FOR POP MUSIC',
 		'LBC EXPRESS',
-		'FUNDACION INTERED',
+		
 		'J.P.T CENTRAL',
 		'Alchryss Inn And Grill Hauz',
-		'WESTERN UNNION'];
-
 		
+		];
 
+		var mallname = [
+		'sm','robinsons','zcc','gaisano',
+		]
+
+		var landmarkname = [
+		'banza church ruins',
+		'magellans anchorage',
+		'balanghay shrine',
+		'delta discovery park',
+		'butuan natinal museum'
+		]
 		
-		makeBlock(block1,position1,1,position1,factorsLatLng,travelMode);
-		makeBlock(block2,position2,2,position2,factorsLatLng,travelMode)
-		makeBlock(block3,position3,3,position3,factorsLatLng,travelMode)
-		makeBlock(block4,position4,4,position4,factorsLatLng,travelMode)
-		makeBlock(block5,position5,5,position5,factorsLatLng,travelMode)
-		//makeBlock(block6,position6,6,position6,factorsLatLng,travelMode)
-		//makeBlock(block7,position7,7,position7,factorsLatLng,travelMode)
-		//makeBlock(block8,position8,8,position8,factorsLatLng,travelMode)
-		//makeBlock(block9,position9,9,position9,factorsLatLng,travelMode)
-		//makeBlock(block10,position10,10,position10,factorsLatLng,travelMode)
-		//makeBlock(block11,position11,11,position11,factorsLatLng,travelMode)
-		//makeBlock(block12,position12,12,position12,factorsLatLng,travelMode)
-		//makeBlock(block13,position13,13,position13,factorsLatLng,travelMode)
-		//makeBlock(block14,position14,14,position14,factorsLatLng,travelMode)
-		//makeBlock(block15,position15,15,position15,factorsLatLng,travelMode)
-		//makeBlock(block16,position16,16,position16,factorsLatLng,travelMode)
-		//makeBlock(block17,position17,17,position17,factorsLatLng,travelMode)
-		//makeBlock(block18,position18,18,position18,factorsLatLng,travelMode)
-		//makeBlock(block19,position19,19,position19,factorsLatLng,travelMode)
-		//makeBlock(block20,position20,20,position20,factorsLatLng,travelMode)
-		//makeBlock(block21,position21,21,position21,factorsLatLng,travelMode)
-		//makeBlock(block22,position22,22,position22,factorsLatLng,travelMode)
-		//makeBlock(block23,position23,23,position23,factorsLatLng,travelMode)
-		//makeBlock(block24,position24,24,position24,factorsLatLng,travelMode)
-		//makeBlock(block25,position25,25,position25,factorsLatLng,travelMode)
+		makeBlock(block1,position1,1,position1,destinations,travelMode)
+		makeBlock(block2,position2,2,position2,destinations,travelMode)
+		makeBlock(block3,position3,3,position3,destinations,travelMode)
+		makeBlock(block4,position4,4,position4,destinations,travelMode)
+		makeBlock(block5,position5,5,position5,destinations,travelMode)
+		//makeBlock(block6,position6,6,position6,destinations,travelMode)
+		//makeBlock(block7,position7,7,position7,destinations,travelMode)
+		//makeBlock(block8,position8,8,position8,destinations,travelMode)
+		//makeBlock(block9,position9,9,position9,destinations,travelMode)
+		//makeBlock(block10,position10,10,position10,destinations,travelMode)
+		//makeBlock(block11,position11,11,position11,destinations,travelMode)
+		//makeBlock(block12,position12,12,position12,destinations,travelMode)
+		//makeBlock(block13,position13,13,position13,destinations,travelMode)
+		//makeBlock(block14,position14,14,position14,destinations,travelMode)
+		//makeBlock(block15,position15,15,position15,destinations,travelMode)
+		//makeBlock(block16,position16,16,position16,destinations,travelMode)
+		//makeBlock(block17,position17,17,position17,destinations,travelMode)
+		//makeBlock(block18,position18,18,position18,destinations,travelMode)
+		//makeBlock(block19,position19,19,position19,destinations,travelMode)
+		//makeBlock(block20,position20,20,position20,destinations,travelMode)
+		//makeBlock(block21,position21,21,position21,destinations,travelMode)
+		//makeBlock(block22,position22,22,position22,destinations,travelMode)
+		//makeBlock(block23,position23,23,position23,destinations,travelMode)
+		//makeBlock(block24,position24,24,position24,destinations,travelMode)
+		//makeBlock(block25,position25,25,position25,destinations,travelMode)
 		
 	
 		function makeBlock(paths, position, blocknumber, origin, factor, travelMode){
+			
 			var block = new google.maps.Polygon({
 				paths:paths,
 				strokeColor:'violet',
@@ -183,16 +192,22 @@
 			}, callback);
 
 			var mallcount = 0;
+			var landmarkcount = 0;
 			var bcCount = 0;
+			var success_rate = 0;
 
 			var malls = [];
 			var bc = [];
+			var landmark = [];
+			
 
 			function callback(response, status) {
+				//console.log(status)
+    				
 				if (status == 'OK') {
 					var origins = response.originAddresses;
 					var destinations = response.destinationAddresses;
-					
+					//console.log(origins.length)
 					for (var i = 0; i < origins.length; i++) {
 						var results = response.rows[i].elements;
 						
@@ -203,7 +218,8 @@
 					  		var duration = element.duration.text;
 					  		var from = origins[i];
 							var to = destinations[j];
-
+							
+							
 							console.log("block " + blocknumber + " TO " + factorss[j] + " = " + distance);
 
 							if(j <= 3){
@@ -213,24 +229,40 @@
 									mallcount+=1;
 	
 								}
-								
-							}
-
-							if(j >=4 ){
-								
-								if(parseInt(distance) <=2 ){
-									bc.push(factorss[j])
-									bcCount+=1;
+								else{
+									//do nothing
 								}
 								
 							}
 
+							if(j >=4 && j <= 13){
+								
+								if(parseInt(distance) <= 2 ){
+									bc.push(factorss[j])
+									bcCount+=1;
+								}
+
+								else{
+									//do nothing
+								}
+								
+							}
+
+							if(j <= 18 && j>=14){
+								
+								if(parseInt(distance) <= 4){
+									landmark.push(factorss[j])
+									landmarkcount+=1;
+								}
+								else{
+									//do nothing
+								}
+							}
+
 						}
 					}
+					//console.log(results)
 
-					console.log(mallcount)
-					console.log(malls)
-					console.log(bc)
 
 					function percentage(obtained, total){
 						rate = (obtained/total)*100
@@ -238,24 +270,38 @@
 						return rate
 					}
 		
-					business_Centers = percentage(bcCount,bcname.length)
-					console.log(business_Centers)
+					business_Centers_percentage = percentage(bcCount,bcname.length)
+					mallpercentage = percentage(mallcount,mallname.length)
+					landmarkpercentage = percentage(landmarkcount,landmarkname.length)
+					total = mallpercentage + business_Centers_percentage + landmarkpercentage;
+					//console.log(total)
+					success_rate = percentage(total,300)
+					console.log(success_rate)
+					console.log(mallcount)
+					console.log("COVERED MALLS: "+ malls)
+					console.log(mallpercentage)
+					console.log("COVERED BUSINESS: "+ bc)
+					console.log(business_Centers_percentage)
+					console.log("COVERED LANDMARKS: "+ landmark )
+					console.log(landmarkpercentage)
 
 					
 
 				}
+				content(business_Centers_percentage,mallpercentage,landmarkpercentage,success_rate)
 
-				function content(){
+				
+				function content(bc,mall,landmark,success_rate){
 					var infowindow = new google.maps.InfoWindow();
 			
 					google.maps.event.addListener(block,'click', function() {
 					
 						
-						var contentString = '<div id = "contentSize">BUSINESS CENTERS: '+ business_Centers + '%'+ '</div>' ;
+						var contentString = '<div id = "contentSize">BLOCK #'+blocknumber+'<br><br>MALLS: '+ mall  +  '%' + '<br>' + 'BUSINESS CENTERS: '+ bc.toFixed(2) + '%' +'<br>' + 'LANDMARKS: '+ landmark.toFixed(2) + '%' + '<br>'+'<br>' + 'SUCCESS RATE: '+success_rate.toFixed(2)+'%'+'</div>' ;
 							infowindow.setContent(contentString);
 							infowindow.setPosition(position[0]);
 							
-					
+							
 						infowindow.open(map);
 					}); 
 				}
@@ -267,7 +313,7 @@
 
 		}
 		
-		 
+		//console.log(mallcount)
 
 
 
